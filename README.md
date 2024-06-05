@@ -1,4 +1,4 @@
-# BARKER´s Club | NFT Tiered Membership
+# BARKER's Club | NFT Tiered Membership
 
 ## NFT Minting DApp & Collection on Solana Using Sugar and Umi (Candy Machine)
 
@@ -22,7 +22,7 @@ Ensure you have the following tools installed before proceeding:
 
 Run the following command to generate a new keypair:
 ```sh
-npm run generate-keypair
+tsc generateKeypair.ts && node generateKeypair.js
 ```
 
 ### Files and Folder Structure
@@ -33,32 +33,34 @@ dapp/
 ├── wallet.json
 ├── config.json
 └── assets/
-    ├── [0-9].png
-    ├── [0-9].json
+    ├── 0.png
+    ├── 0.json
+    ├── 1.png
+    ├── 1.json
     ├── collection.png
     └── collection.json
 ```
 
 ### Usage
 
-1. **Install Dependencies**: Ensure all dependencies are installed. Run the following command in your project directory:
+1. **Generate Private Key**: Run the following command to generate a private key and save it in the `.env` file:
    ```sh
-   npm install
+   echo "PRIVATE_KEY=<your_private_key>" > .env
    ```
 
-2. **Generate Private Key**: Run the script to generate a new keypair and save it to the `.env` file:
+2. **Validate Configuration**: Use the following command to validate the configuration:
    ```sh
-   npm run generate-keypair
+   sugar validate
    ```
 
-3. **Validate Configuration**: Use the following command to validate the configuration:
+3. **Upload Assets**: Upload assets to the Candy Machine using Sugar:
    ```sh
-   npm run validate
+   sugar upload
    ```
 
-4. **Upload Assets**: Upload assets to the Candy Machine using Sugar:
+4. **Verify**: Verify the Candy Machine:
    ```sh
-   npm run mint
+   sugar verify
    ```
 
 5. **Test Mint**: Test the minting process:
@@ -72,21 +74,93 @@ dapp/
 
 ### Improvements
 
-- **Enhanced Security**: Implemented dotenv for storing sensitive information such as private keys.
-- **Automated Keypair Generation**: Added a script for automated keypair generation.
-- **Modular Scripts**: Modularized scripts for better organization and maintainability.
-- **Convenience Scripts**: Added convenience scripts for common tasks such as minting and validation.
+- Enhanced security by implementing dotenv for storing sensitive information such as private keys.
+- Added verification step for Candy Machine to ensure the successful upload of assets.
 
-### Environment Variables
+### Example Collection Metadata (`collection.json`)
 
-Ensure you have a `.env` file to store sensitive information like private keys. You can generate it as follows:
-
-```sh
-echo "PRIVATE_KEY=<your_private_key>" > .env
+```json
+{
+  "name": "BARKER's Club Collection",
+  "symbol": "BARK",
+  "description": "An exclusive collection of NFTs representing tiered memberships in the BARKER's Club. Each NFT grants access to unique benefits and community features within the BARK Protocol ecosystem.",
+  "image": "collection.png",
+  "attributes": [
+    {
+      "trait_type": "Tier",
+      "value": "Gold"
+    },
+    {
+      "trait_type": "Membership",
+      "value": "Lifetime"
+    }
+  ],
+  "seller_fee_basis_points": 500,
+  "external_url": "https://barkerclub.com",
+  "creators": [
+    {
+      "address": "4BZ3gQFxCU7hW3X2MqeFU2WBb5Zdsr5xnFLr6HerFA6i",
+      "share": 100
+    }
+  ]
+}
 ```
 
-### Disclaimer
+### Example Individual NFT Metadata (`0.json`)
 
-This code is provided for experimental purposes only. Use it at your own risk. The authors and contributors are not responsible for any damages or losses that may arise from using this code. It is recommended to thoroughly review and test the code in a safe environment before deploying it in any production system.
+```json
+{
+  "name": "BARKER's Club Gold Membership #0",
+  "symbol": "BARK",
+  "description": "A gold membership NFT for the BARKER's Club.",
+  "image": "0.png",
+  "attributes": [
+    {
+      "trait_type": "Tier",
+      "value": "Gold"
+    },
+    {
+      "trait_type": "Membership",
+      "value": "Annual"
+    }
+  ],
+  "seller_fee_basis_points": 500,
+  "external_url": "https://barkerclub.com/nft/0",
+  "creators": [
+    {
+      "address": "4BZ3gQFxCU7hW3X2MqeFU2WBb5Zdsr5xnFLr6HerFA6i",
+      "share": 100
+    }
+  ]
+}
+```
 
-By following these steps, you should be able to generate a keypair, validate configurations, and mint NFTs using the Sugar and Umi protocols on Solana. If you encounter any issues or need further assistance, feel free to ask!
+### Security
+
+Ensure to keep your `.env` file secure and do not expose your private key. You can add `.env` to your `.gitignore` file to prevent it from being committed to your repository.
+
+### Sample `wallet.json`
+
+```json
+{
+  "version": 1,
+  "account": "4BZ3gQFxCU7hW3X2MqeFU2WBb5Zdsr5xnFLr6HerFA6i",
+  "private_key": "<your_private_key>"
+}
+```
+
+### Notice
+
+**Notice!** The website for this project is not deployed yet.
+
+### Additional Resources
+
+- [Solana Documentation](https://docs.solana.com/)
+- [Metaplex Documentation](https://docs.metaplex.com/)
+- [Sugar Documentation](https://docs.metaplex.com/candy-machine-v2/sugar)
+- [Umi Documentation](https://docs.metaplex.com/umi)
+
+This README provide a comprehensive guide to setting up and deploying your NFT collection on Solana using Sugar and Umi.
+
+## Licence
+
