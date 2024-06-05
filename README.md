@@ -87,9 +87,9 @@ dapp/
 
 ---
 
-### BARKER's Club NFTs & Members Tiers
+### Example: BARKER's Club NFT & Membership Tier CA:
 
-- **Pubkey**: 4BZ3gQFxCU7hW3X2MqeFU2WBb5Zdsr5xnFLr6HerFA6i ([Solscan Link](https://solscan.io/account/4BZ3gQFxCU7hW3X2MqeFU2WBb5Zdsr5xnFLr6HerFA6i))
+- **The Peaky Barker Pubkey**: 4BZ3gQFxCU7hW3X2MqeFU2WBb5Zdsr5xnFLr6HerFA6i ([Solscan Link](https://solscan.io/account/4BZ3gQFxCU7hW3X2MqeFU2WBb5Zdsr5xnFLr6HerFA6i))
 
 ---
 

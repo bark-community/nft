@@ -1,0 +1,29 @@
+{
+    "name": "BARKER's Club Full Membership #0",
+    "symbol": "BARK",
+    "description": "A full membership NFT for the BARKER's Club.",
+    "image": "full_member.png",
+    "attributes": [
+      {
+        "trait_type": "Tier",
+        "value": "Full Member"
+      },
+      {
+        "trait_type": "Membership",
+        "value": "Annual"
+      },
+      {
+        "trait_type": "Club",
+        "value": "BARKER´s Club"
+      }
+    ],
+    "seller_fee_basis_points": 500,
+    "external_url": "https://barkerclub.com/nft/full_member/0",
+    "creators": [
+      {
+        "address": "BarkersClubAddress",
+        "share": 100
+      }
+    ]
+  }
+  

@@ -1,0 +1,29 @@
+{
+    "name": "BARKER's Club Soldier Membership #0",
+    "symbol": "BARK",
+    "description": "A soldier membership NFT for the BARKER's Club.",
+    "image": "soldier.png",
+    "attributes": [
+      {
+        "trait_type": "Tier",
+        "value": "Soldier"
+      },
+      {
+        "trait_type": "Membership",
+        "value": "Annual"
+      },
+      {
+        "trait_type": "Club",
+        "value": "Sparky Bros"
+      }
+    ],
+    "seller_fee_basis_points": 500,
+    "external_url": "https://barkerclub.com/nft/soldier/0",
+    "creators": [
+      {
+        "address": "SparkyBrosAddress",
+        "share": 100
+      }
+    ]
+  }
+  

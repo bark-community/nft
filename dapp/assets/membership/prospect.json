@@ -1,0 +1,29 @@
+{
+    "name": "BARKER's Club Prospect Membership #0",
+    "symbol": "BARK",
+    "description": "A prospect membership NFT for the BARKER's Club.",
+    "image": "prospect.png",
+    "attributes": [
+      {
+        "trait_type": "Tier",
+        "value": "Prospect"
+      },
+      {
+        "trait_type": "Membership",
+        "value": "Annual"
+      },
+      {
+        "trait_type": "Club",
+        "value": "The Peaky Barkers"
+      }
+    ],
+    "seller_fee_basis_points": 500,
+    "external_url": "https://barkersclub.com/nft/prospect/0",
+    "creators": [
+      {
+        "address": "4BZ3gQFxCU7hW3X2MqeFU2WBb5Zdsr5xnFLr6HerFA6i",
+        "share": 100
+      }
+    ]
+  }
+  
