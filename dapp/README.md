@@ -5,19 +5,19 @@ An example of a `collection.json` file that defines the metadata for your NFT co
   "name": "BARKER's Club Collection",
   "symbol": "BARK",
   "description": "An exclusive collection of NFTs representing tiered memberships in the BARKER's Club. Each NFT grants access to unique benefits and community features within the BARK Protocol ecosystem.",
-  "image": "collection.png",
+  "image": "membership-collection.png",
   "attributes": [
     {
       "trait_type": "Tier",
-      "value": "Gold"
+      "value": "Prospect"
     },
     {
       "trait_type": "Membership",
-      "value": "Lifetime"
+      "value": "Full_Member"
     }
   ],
   "seller_fee_basis_points": 500,
-  "external_url": "https://barkerclub.com",
+  "external_url": "https://barkersclub.com",
   "creators": [
     {
       "address": "4BZ3gQFxCU7hW3X2MqeFU2WBb5Zdsr5xnFLr6HerFA6i",

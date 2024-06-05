@@ -4,6 +4,8 @@
 
 This guide provides step-by-step instructions to deploy an NFT collection on Solana using Sugar (Candy Machine) and Umi (a Metaplex JS protocol for Solana).
 
+---
+
 ### Prerequisites
 
 Ensure you have the following tools installed before proceeding:
@@ -18,6 +20,8 @@ Ensure you have the following tools installed before proceeding:
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   ```
 
+---
+
 ### Generate New Keypair
 
 Run the following command to generate a new keypair:
@@ -25,7 +29,9 @@ Run the following command to generate a new keypair:
 tsc generateKeypair.ts && node generateKeypair.js
 ```
 
-### Files and Folder Structure
+---
+
+### Tiered Membership and Clubs Files and Folder Structure
 
 ```
 dapp/
@@ -33,13 +39,24 @@ dapp/
 ├── wallet.json
 ├── config.json
 └── assets/
-    ├── 0.png
-    ├── 0.json
-    ├── 1.png
-    ├── 1.json
-    ├── collection.png
-    └── collection.json
+    ├── clubs/
+    │   ├── sparky.png
+    │   ├── peaky.png
+    │   └── barker.png
+    └── membership/
+        ├── prospect.png
+        ├── prospect.json
+        ├── soldier.png
+        ├── soldier.json
+        ├── full_member.png
+        ├── full_member.json
+        ├── veteran_member.png
+        ├── veteran_member.json
+        ├── collection.png
+        └── collection.json
 ```
+
+---
 
 ### Usage
 
@@ -68,14 +85,13 @@ dapp/
    sugar mint
    ```
 
+---
+
 ### BARKER's Club NFTs & Members Tiers
 
 - **Pubkey**: 4BZ3gQFxCU7hW3X2MqeFU2WBb5Zdsr5xnFLr6HerFA6i ([Solscan Link](https://solscan.io/account/4BZ3gQFxCU7hW3X2MqeFU2WBb5Zdsr5xnFLr6HerFA6i))
 
-### Improvements
-
-- Enhanced security by implementing dotenv for storing sensitive information such as private keys.
-- Added verification step for Candy Machine to ensure the successful upload of assets.
+---
 
 ### Example Collection Metadata (`collection.json`)
 
@@ -88,15 +104,15 @@ dapp/
   "attributes": [
     {
       "trait_type": "Tier",
-      "value": "Gold"
+      "value": "Prospect"
     },
     {
       "trait_type": "Membership",
-      "value": "Lifetime"
+      "value": "Full Member"
     }
   ],
   "seller_fee_basis_points": 500,
-  "external_url": "https://barkerclub.com",
+  "external_url": "https://barkersclub.com",
   "creators": [
     {
       "address": "4BZ3gQFxCU7hW3X2MqeFU2WBb5Zdsr5xnFLr6HerFA6i",
@@ -106,18 +122,20 @@ dapp/
 }
 ```
 
-### Example Individual NFT Metadata (`0.json`)
+---
+
+### Example Individual NFT Metadata (`prospect.json`)
 
 ```json
 {
-  "name": "BARKER's Club Gold Membership #0",
+  "name": "BARKER's Club Prospect Membership #prospect",
   "symbol": "BARK",
-  "description": "A gold membership NFT for the BARKER's Club.",
-  "image": "0.png",
+  "description": "A prospect membership NFT for the BARKER's Club.",
+  "image": "prospect.png",
   "attributes": [
     {
       "trait_type": "Tier",
-      "value": "Gold"
+      "value": "Prospect"
     },
     {
       "trait_type": "Membership",
@@ -135,11 +153,23 @@ dapp/
 }
 ```
 
+---
+
+## Staking NFTs
+
+Staking within the BARK allows members to lock up their membership tokens (NFTs) for a certain period in exchange for rewards and benefits. This mechanism incentivizes members to contribute to the stability and growth of the BARKER´s Club ecosystem while earning passive income.
+
+- **Staking Mechanism**: NFTs involves locking up non-fungible tokens (NFTs) in a smart contract for a certain period in exchange for rewards or other benefits
+
+---
+
 ### Security
 
 Ensure to keep your `.env` file secure and do not expose your private key. You can add `.env` to your `.gitignore` file to prevent it from being committed to your repository.
 
-### Sample `wallet.json`
+---
+
+### Sample `wallet.json
 
 ```json
 {
@@ -153,6 +183,8 @@ Ensure to keep your `.env` file secure and do not expose your private key. You c
 
 **Notice!** The website for this project is not deployed yet.
 
+---
+
 ### Additional Resources
 
 - [Solana Documentation](https://docs.solana.com/)
@@ -160,7 +192,10 @@ Ensure to keep your `.env` file secure and do not expose your private key. You c
 - [Sugar Documentation](https://docs.metaplex.com/candy-machine-v2/sugar)
 - [Umi Documentation](https://docs.metaplex.com/umi)
 
-This README provide a comprehensive guide to setting up and deploying your NFT collection on Solana using Sugar and Umi.
+This README provides a comprehensive guide to setting up and deploying your NFT collection on Solana using Sugar and Umi.
 
-## Licence
+---
 
+## License
+
+BARKER's Club is licensed under the ISC License.
