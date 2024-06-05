@@ -1,0 +1,29 @@
+{
+  "name": "nft",
+  "version": "1.0.0",
+  "description": "NFT Collection on Solana Using Sugar and Umi (Candy Machine)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-keypair": "tsc generateKeypair.ts && node generateKeypair.js",
+    "build": "anchor build",
+    "mint": "sugar mint",
+    "validate": "sugar validate"
+  },
+  "keywords": [],
+  "author": "BARK Protocol",
+  "license": "ISC",
+  "dependencies": {
+    "@metaplex-foundation/umi-bundle-defaults": "^0.9.1",
+    "@metaplex-foundation/umi-bundle-tests": "^0.9.1",
+    "@solana/web3.js": "^1.92.1",
+    "dotenv": "^16.4.5",
+    "fs": "^0.0.1-security"
+  },
+  "peerDependencies": {
+    "@metaplex-foundation/umi": "^0.9.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}

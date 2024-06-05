@@ -1,0 +1,33 @@
+{
+    "number": 10,
+    "symbol": "BARKER",
+    "sellerFeeBasisPoints": 500,
+    "isMutable": true,
+    "isSequential": false,
+    "ruleSet": null,
+    "creators": [
+        {
+            "address": "4BZ3gQFxCU7hW3X2MqeFU2WBb5Zdsr5xnFLr6HerFA6i",
+            "share": 100
+        }
+    ],    
+    "uploadMethod": "bundlr",
+    "awsS3Bucket": null,
+    "retainAuthority": true,
+    "awsConfig": null,
+    "nftStorageAuthToken": null,
+    "shdwStorageAccount": null,
+    "pinataConfig": null,
+    "hiddenSettings": null,
+    "guards": {
+        "default": {
+          "solPayment": {
+            "value": 0.01,
+            "destination": "4BZ3gQFxCU7hW3X2MqeFU2WBb5Zdsr5xnFLr6HerFA6i"
+          },
+          "startDate": {
+            "date": "2024-06-23T20:00:00Z"
+          }
+        }
+      }    
+}
